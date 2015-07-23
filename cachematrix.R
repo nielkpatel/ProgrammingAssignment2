@@ -4,7 +4,7 @@
 ##3. Set Value of inverse
 ##4. Get value of inverse
 
-## Write a short comment describing this function
+## i is used for inverse, solve function is used to compute the inverse of a matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 i <- NULL
