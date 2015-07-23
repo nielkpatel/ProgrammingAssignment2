@@ -19,17 +19,20 @@ list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
 
-## Creates the inverse of the matrix created with the above function
+## cacheSolve Creates the inverse of the matrix created with the above function
 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 i <-x$getinverse()
-if(!is.null(i)){
+
+if(!is.null(i)){                                                  ##If the inverse has already been calculated
   message("getting cached data")
   return(i)
 }
-data <- x$get()
+
+
+data <- x$get()                                            ##if the inverse has not been calculated, it calculates and stores
 i <-solve(data,...)
 x$setinverse(i)
 i
